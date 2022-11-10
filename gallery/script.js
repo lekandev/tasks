@@ -40,6 +40,9 @@ prev.addEventListener("click", () => {
 prev.addEventListener("mouseover", () => {
   displayBlock();
 });
+prev.addEventListener("mouseout", () => {
+  displayNone();
+});
 
 next.addEventListener("click", () => {
   nextImg();
@@ -47,6 +50,9 @@ next.addEventListener("click", () => {
 });
 next.addEventListener("mouseover", () => {
   displayBlock();
+});
+next.addEventListener("mouseout", () => {
+  displayNone();
 });
 
 imageContainer.innerHTML = `<img src=${images[i]} alt="gallery" class="gallery__image" />`;
