@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Image Slider</title>
     <style>
+      body {
+        background-color: #eeeeee;
+      }
+
       .gallery {
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 25px;
       }
 
       .gallery__img > img {
-        width: 300px;
+        width: 275px;
         object-fit: cover;
         border-radius: 10px;
       }
@@ -23,6 +26,26 @@
       .next,
       .previous {
         cursor: pointer;
+        position: relative;
+        background-color: #ffffff85;
+        border-radius: 50%;
+        padding: 10px;
+        transition: 0.3s ease-in;
+        display: none;
+      }
+
+      .next > img,
+      .previous > img {
+        width: 20px;
+        display: block;
+      }
+
+      .next {
+        right: 50px;
+      }
+
+      .previous {
+        left: 50px;
       }
     </style>
   </head>
